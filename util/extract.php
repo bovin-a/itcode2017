@@ -3,6 +3,8 @@
 
     error_reporting(E_ALL);
 
-    shell_exec('unzip ../itcode2017.zip -d ../src');
-    shell_exec('rm ../itcode2017.zip');
+    shell_exec('tar -xf ../itcode2017.tar.gz -C ../');
+    shell_exec('rm ../itcode2017.tar.gz');
+    shell_exec('mv ../src/public/.htaccess ../.htaccess');
+
     echo 'Extracted';
